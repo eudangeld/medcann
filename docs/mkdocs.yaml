@@ -1,0 +1,8 @@
+site_name: 'node-service-vargas-test'
+site_description: 'Projeto de testes gerais'
+
+nav:
+  - Introduction: index.md
+  - 'Bug Tracker': BugTracker.md
+plugins:
+  - techdocs-core
