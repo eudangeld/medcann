@@ -1,13 +1,27 @@
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: API
 metadata:
-  name: sample-service-1
-  description: |
-    A service for testing Backstage functionality. Configured for
-    GitHub Actions.
+  name: api-test
+  description: test of Gaivota dev Portal
   annotations:
-    github.com/project-slug: roadiehq/sample-service
+    github.com/project-slug: eudangeld/medcann
+    github.com/team-slug: Software
+    backstage.io/techdocs-ref: dir:.
 spec:
-  type: service
-  owner: my-team-name
+  type: openapi
   lifecycle: production
+  owner: Software
+  system: base-service
+  definition:  |
+    openapi: "3.0.0"
+    info:
+      version: 1.0.0
+      title: Artist API
+      license:
+        name: MIT
+    servers:
+      - url: http://artist.spotify.net/v1
+    paths:
+      /artists:
+        get:
+          summary: List all artists
