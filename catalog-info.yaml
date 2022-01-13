@@ -6,7 +6,7 @@ metadata:
     A service for testing Backstage functionality. Configured for
     GitHub Actions.
   annotations:
-    github.com/project-slug: roadiehq/sample-service
+    github.com/project-slug: eudangeld/medcann
 spec:
   type: service
   owner: my-team-name
